@@ -1,0 +1,40 @@
+.search-page {
+  padding: 80px 60px;
+}
+
+.search-page h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+}
+
+.search-bar input:focus {
+  border-color: #ff4141;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 14px 24px;
+  background-color: #ff4141;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-bar button:hover {
+  background-color: #e33636;
+}

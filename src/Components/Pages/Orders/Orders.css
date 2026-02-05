@@ -1,0 +1,394 @@
+/* src/Components/Pages/Orders/Orders.css */
+.orders-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.orders-container h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+}
+
+/* No Orders State */
+.no-orders {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-orders p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.shop-now-btn {
+  padding: 12px 30px;
+  background: #ff4141;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.shop-now-btn:hover {
+  background: #e63636;
+  transform: translateY(-2px);
+}
+
+/* Orders List */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Order Header */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.order-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.order-date {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000; /* ✅ Changed to black for readability */
+}
+
+.status-processing {
+  background: #FFE082;
+}
+
+.status-transit {
+  background: #90CAF9;
+}
+
+.status-delivered {
+  background: #A5D6A7;
+}
+
+.status-cancelled {
+  background: #EF9A9A;
+}
+
+/* Order Items */
+.order-items {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-item {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.order-item-image {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.order-item-details {
+  flex: 1;
+}
+
+.order-item-details h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.item-quantity {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.item-price {
+  margin: 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ff4141;
+}
+
+/* Order Footer */
+.order-footer {
+  padding: 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.order-address strong,
+.order-payment strong,
+.order-total strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.order-address p,
+.order-payment p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.order-total {
+  text-align: right;
+}
+
+.total-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff4141;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-footer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .order-total {
+    text-align: left;
+  }
+
+  .order-item {
+    flex-direction: column;
+  }
+
+  .order-item-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Refund Button */
+.refund-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.refund-btn:hover {
+  background: #f57c00;
+  transform: translateY(-1px);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.refund-product-info {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.refund-product-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.refund-product-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.refund-form label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.refund-form input,
+.refund-form textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.refund-form textarea {
+  resize: vertical;
+}
+
+.refund-amount {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #1976d2;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.modal-actions .btn-primary {
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modal-actions .btn-primary:hover {
+  background: #45a049;
+}
+
+.modal-actions .btn-secondary {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modal-actions .btn-secondary:hover {
+  background: #e0e0e0;
+}
+/* Order Actions Section */
+.order-actions {
+  padding: 15px 20px;
+  background: #fff3e0;
+  border-top: 1px solid #ffe0b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cancel Order Button */
+.cancel-order-btn {
+  padding: 12px 30px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+}
+
+.cancel-order-btn:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.4);
+}
+
+.cancel-order-btn:active {
+  transform: translateY(0);
+}

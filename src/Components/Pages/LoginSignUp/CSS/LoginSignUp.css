@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+.loginsignup {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff4d9 url('../../../Assets/comic.png') no-repeat center bottom;
+  display: flex;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.loginsignup-container {
+  width: 500px;
+  background-color: white;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 8px;       
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.loginsignup-container h1{
+    margin: 20px 0px;
+}
+
+.loginsignup-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-top: 30px;
+}
+.loginsignup-fields input{
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 18px;
+}
+.loginsignup-container button{
+  width: 100%;
+  height: 72px;
+  color: #fff;
+  background: #ff4141;
+  margin-top: 30px;
+  border: 1px solid transparent; 
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.loginsignup-login span{
+    color: #ff4141;
+    font-weight: 600;
+}
+
+.loginsignup-agree{
+  display: flex;
+  justify-content: center;    
+  align-items: flex-start;    
+  gap: 12px;
+  margin-top: 20px;
+  color: #5c5c5c;
+  font-weight: 500;
+  max-width: 440px;             
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;             
+}
+
+.loginsignup-agree input[type="checkbox"]{
+  margin-top: 5px;             
+  flex: 0 0 auto;
+}
+.loginsignup-agree p{
+  margin: 0;
+  line-height: 1.4;
+}
+
+.loginsignup-fields input[type="password"] {
+  -webkit-text-security: disc !important;
+}
